@@ -1,0 +1,111 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Form Page</title>
+</head>
+<body>
+  <div style="text-align:center">
+    <div id="ctr">
+      <h1 class="polaroid1">Survey form</h1>
+    </div>
+    <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()" >
+      <div class="polaroid">
+        <br>
+        <table align="center">
+          <tr>
+            <td>
+              <label for="fname">First name:</label>
+              <input type="text" formControlName="customerFirstName" ></td>
+            <td>
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname ctr" formControlName="customerLastName" name = "fname" ></td>
+          </tr>
+
+          <br><br>
+          <tr>
+            <td>
+              <label for="Straddr">Street Address:</label>
+              <input type="text" id="Straddr" formControlName="addressstreet" >
+            </td>
+            <td>
+
+              <label for="City">City:</label>
+              <input type="text" id="City" formControlName="addresscity" ></td>
+          </tr>
+          <br><br>
+          <tr>
+            <td> <label for="State">State:</label>
+              <input type="text" id="State" formControlName="addressstate" >
+            </td>
+            <td>
+              <label for="ZIP">ZIP:</label>
+              <input type="number" id="ZIP" formControlName="addresszip">
+            </td>
+          </tr>
+          <br><br>
+          <tr>
+            <td>
+              <label for="Tel">Tel No:</label>
+              <input type="tel" id="Tel" formControlName="contactphone"></td>
+            <td>
+              <label for="Email">E-Mail:</label>
+              <input type="Email" id="Email" formControlName="contactemail">
+            </td><br><br>
+          </tr>
+          <label for="Date">Date:</label>
+          <input type="date" id="Date"  formControlName="Date">
+          <br><br><br>
+        </table>
+      </div>
+      <div class="polaroid" id="Lft">
+        What do you like the most about campus?
+        <label for="student">Student</label>
+        <input type="checkbox" formControlName="student" value="students">
+
+        <label for="Location">Location</label>
+        <input type="checkbox" formControlName="location" value="Loc">
+
+        <label for="Campus">Campus</label>
+        <input type="checkbox" formControlName="campus" value="Campus">
+
+        <label for="Atmos">Atmosphere</label>
+        <input type="checkbox" formControlName="atmosphere" value="Atmos">
+
+        <label for="Dorm">Dorm Room</label>
+        <input type="checkbox" formControlName="dorm" value ="Dorm">
+
+        <label for="Sports">Sports</label>
+        <input type="checkbox" formControlName="sports" value="Sports">
+      </div>
+
+      <div class="polaroid" id="Lft">
+        How you got intrested in this
+        University?
+
+        <input type="radio" id="friends" formControlName="interest" value="friends">
+        <label for="friends">friends</label><br>
+        <input type="radio" id="TV" formControlName="interest" value="TV">
+        <label for="TV">TV</label><br>
+        <input type="radio" id="internet" formControlName="interest" value="internet">
+        <label for="internet">Internet</label><br>
+        <input type="radio" id="other" formControlName="interest" value="other">
+        <label for="other">Other</label>
+      </div>
+
+      <div class="polaroid" id="Lft">
+        <label for="Recommending">Would you recommend this school to other
+          Students?</label>
+        <select id="Recommending" formControlName="referral">
+          <option value="Very Likely">Very Likely</option>
+          <option value="Likely">Likely</option>
+          <option value="Unlickely">Unlickely</option>
+        </select>
+      </div>
+      <button type="submit">Upload</button> 
+      <input type="reset" Value="Cancel" class="polaroid">
+
+    </form>
+  </div>
+</body>
+</html>
